@@ -37,7 +37,7 @@
     src: url("../fonts/AktivGrotesk/AktivGroteskCorp-Medium.ttf");
   }
   .bg-img {
-    background: url("../image/bg/bg_1.jpg")  no-repeat;
+    background: url("../image/bg/bg_1.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     object-fit: cover;
@@ -53,13 +53,15 @@
     font-size: 16px;
     letter-spacing: 0.2rem;
     color: #6c6565;
-    }
+    z-index: 5;
+  }
   .form-input label {
     position: absolute;
     top: 12px;
     left: 15px;
     font-weight: bold;
-    color:#a8a8a8;
+    color: #a8a8a8;
+    z-index: 2;
   }
   .form-input label span {
     display: inline-block;
