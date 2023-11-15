@@ -37,7 +37,7 @@
     src: url("../fonts/AktivGrotesk/AktivGroteskCorp-Medium.ttf");
   }
   .bg-img {
-    background: url("../image/bg/bg_1.jpg"), no-repeat;
+    background: url("../image/bg/bg_1.jpg")  no-repeat;
     background-size: cover;
     background-position: center;
     object-fit: cover;
