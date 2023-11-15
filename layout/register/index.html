@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../../css/register.css" />
+    <link rel="icon" href="../../image/fav_icon.svg" />
+  </head>
+  <body class="base">
+    <div class="container h-screen mx-auto bg-img">
+      <div class="w-3/4 h-screen relative  mx-auto grid grid-rows-[20%,80%] justify-center items-stretch  ">
+        <div class="absolute top-0 left-0 [&>*]:px-8 [&>*]:w-full w-44 [&>*]:h-12 text-3xl flex justify-center items-center flex-col [&>*]:font-mavis" >
+          <button class="bg-fuchsia-600">sign In</button>
+          <button class="bg-blue-700">sign Up</button>
+        </div>
+        <div class="flex justify-center items-center ">
+          <img src="../../image/bg/bg_1.jpg" alt="profile">
+          <h1 class="capitalize text-4xl text-red-400 light_shadow p-4 rounded-md bg-amber-400 text-center font-Aktiv_Bold inline-block cursor-default">
+            <span >sign</span>
+            <span>In</span>
+          </h1>
+        </div>
+          <form action="#" class="grid grid-rows-5 w-[30rem] h-full  justify-around items-stretch  ">
+            <div class="relative form-input mt-4 flex justify-center items-center">
+              <input type="text" id="firstame" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required>
+              <label>Name</label>
+            </div>
+            <div class="relative form-input my-[10px]">
+              <input type="text" id="firstame" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required>
+              <label>User Name</label>
+            </div>
+            <div class="relative form-input my-[10px]">
+              <input type="email" id="firstame" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required>
+              <label>Email</label>
+            </div>
+            <div class="relative form-input my-[10px]">
+              <input type="password" id="firstame" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required>
+              <label>Password</label>
+            </div>
+            <div class="flex justify-center items-center w-full">
+              <button type="submit" class="btn-shadow  text-center">Register</button>
+
+            </div>
+          </form>
+      </div>
+    </div>
+    <script src="../../src/front/register.js"></script>
+  </body>
+</html>

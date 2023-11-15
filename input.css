@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .base {
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+  }
+}
+@layer utilities {
+  @font-face {
+    font-family: "MAVIS";
+    src: url("../fonts/MAVIS/MAVIS.otf");
+  }
+  @font-face {
+    font-family: "MAVIS_Bold";
+    src: url("../fonts/MAVIS/MAVISBold.woff");
+  }
+  @font-face {
+    font-family: "MAVIS_Light";
+    src: url("../fonts/MAVIS/MAVISLight.ttf");
+  }
+  @font-face {
+    font-family: "Aktiv_Light";
+    src: url("../fonts/AktivGrotesk/AktivGroteskCorp-Light.ttf");
+  }
+  @font-face {
+    font-family: "Aktiv_Bold";
+    src: url("../fonts/AktivGrotesk/AktivGroteskCorp-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Aktiv";
+    src: url("../fonts/AktivGrotesk/AktivGroteskCorp-Medium.ttf");
+  }
+  .bg-img {
+    background: url("../image/bg/bg_1.jpg"), no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+  .form-input input {
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    padding-left: 10px;
+    padding-right: 2rem;
+    font-size: 16px;
+    letter-spacing: 0.2rem;
+    color: #6c6565;
+    }
+  .form-input label {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-weight: bold;
+    color:#a8a8a8;
+  }
+  .form-input label span {
+    display: inline-block;
+    font-size: 16px;
+    min-width: 5px;
+    transition: all 0.5s cubic-bezier(0.14, 0.92, 0.68, 1.58);
+  }
+  .form-input input:focus,
+  .form-input input:valid {
+    outline: 0;
+  }
+  .form-input input:focus + label span,
+  .form-input input:valid + label span {
+    color: white;
+    transform: translateY(-18px);
+  }
+  .btn-shadow {
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px 2px #464444dd;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+  .btn-shadow:hover {
+    box-shadow: 0px -1px 5px 1px #6c6565;
+    transition: all 2s;
+  }
+  .light_shadow {
+    box-shadow: -1px 5px 6px 3px #7c7878;
+  }
+  .light_shadow:hover {
+    box-shadow: -2px 5px 10px 8px #a8a8a8;
+    transition: all 0.5s;
+  }
+}
