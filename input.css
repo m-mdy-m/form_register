@@ -53,7 +53,10 @@
     font-size: 16px;
     letter-spacing: 0.2rem;
     color: #6c6565;
-    z-index: 5;
+    
+  }
+  .completed {
+    background: red;
   }
   .form-input label {
     position: absolute;
@@ -72,16 +75,22 @@
   .form-input input:focus,
   .form-input input:valid {
     outline: 0;
+    background-color: transparent;
   }
+
+
   .form-input input:focus + label span,
   .form-input input:valid + label span {
     color: white;
+    
     transform: translateY(-18px);
+    z-index: 5;
   }
   .btn-shadow {
-    width: 50%;
-    height: 50%;
-    border-radius: 20px;
+    width: 70%;
+    color:#a8a8a8;
+    height: 40%;
+    border-radius:10px;
     box-shadow: 0px 2px 4px 2px #464444dd;
     letter-spacing: 0.2rem;
     font-weight: bold;
