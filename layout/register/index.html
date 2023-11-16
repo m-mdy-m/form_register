@@ -4,44 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
+    <!--  ============== link tailwind file =====================-->
     <link rel="stylesheet" href="../../css/register.css" />
+  <!--  ============== link fav icon =====================-->
     <link rel="icon" href="../../image/fav_icon.svg" />
   </head>
-  <body class="base">
-    <div class="container h-screen mx-auto bg-img">
+  <body class="base bg-img" id="bgImg">
+          <!--  ============== container =====================-->
+    <div class="container h-screen mx-auto "  >
+          <!--  ============== wrapper all form =====================-->
       <div class="w-3/4 h-screen relative  mx-auto grid grid-rows-[20%,80%] justify-center items-stretch  ">
-        <div class="absolute top-0 left-0 [&>*]:px-8 [&>*]:w-full w-44 [&>*]:h-12 text-3xl flex justify-center items-center flex-col [&>*]:font-mavis" >
-          <button class="bg-fuchsia-600">sign In</button>
-          <button class="bg-blue-700">sign Up</button>
+        <div class="absolute top-0 left-0 [&>*]:mt-4 [&>*]:rounded-md [&>*]:px-8 [&>*]:w-full w-44 [&>*]:h-12 text-3xl flex justify-center items-center flex-col [&>*]:font-mavis" >
+          <!--  ============== User registration status =====================-->
+          <button class="bg-[#3e363f70] text-[#7EB2DD] hover:text-[#65909c]" id="sign-In">sign In</button>
+          <button class="bg-[#aefff179] text-[#d1ede1] hover:text-[#80BD9E]" id="sign-Up">sign Up</button>
         </div>
         <div class="flex justify-center items-center ">
-          <!-- <img src="../../image/bg/bg_1.jpg" alt="profile"> -->
-          <h1 class="capitalize text-4xl text-red-400 light_shadow p-4 rounded-md bg-amber-400 text-center font-Aktiv_Bold inline-block cursor-default">
-            <span >sign</span>
-            <span>In</span>
+          <!--  ============== Changing the state of the form compared to the state of the user =====================-->
+          <h1 class="capitalize text-4xl text-[#ffe0ac] light_shadow px-4 py-2 rounded-md bg-[#08080880] text-center font-mavis inline-block cursor-default">
+            <span>sign</span>
+            <span id="register_login">Up</span>
           </h1>
         </div>
-          <form action="#" class="grid grid-rows-5 w-[30rem] h-full  justify-around items-stretch  ">
-            <div class="relative form-input mt-4 flex justify-center items-center">
+          <!--  ============== form register =====================-->
+          <form action="#" class="grid grid-rows-5 w-[30rem] h-full  justify-stretch items-stretch  ">
+            <!--  ============== Input wrapper form =====================-->
+            <div class="relative form-input mt-4 flex justify-center items-center w-full "id="wrapper-name">
+            <!--  ============== Input form =====================-->
               <input type="text" id="firstame" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required autocomplete="off">
               <label>Name</label>
             </div>
-            <div class="relative form-input my-[10px]">
+            <div class="relative form-input my-[10px] w-full " id="wrapper-username">
+            <!--  ============== Input form =====================-->
               <input type="text" id="user-name" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required autocomplete="off">
               <label>User Name</label>
             </div>
-            <div class="relative form-input my-[10px]">
+            <div class="relative form-input my-[10px] w-full " id="wrapper-email">
+            <!--  ============== Input form =====================-->
               <input type="email" id="email" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required autocomplete="off">
               <label>Email</label>
             </div>
-            <div class="relative form-input my-[10px]  flex justify-center items-center">
+            <div class="relative form-input my-[10px]  w-full  flex justify-center items-center">
+            <!--  ============== Input form =====================-->
               <img src="../../image/svg/emoji/main.svg" alt="show-password" class="absolute right-4 cursor-pointer " id="showPassword" >
               <input type="password" id="password" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required autocomplete="off">
               <label>Password</label>
             </div>
+            <!--  ============== Button submit =====================-->
             <div class="flex justify-center items-center w-full">
               <button type="submit" class="btn-shadow text-center">Register</button>
-
             </div>
           </form>
       </div>

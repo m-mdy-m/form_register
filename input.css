@@ -100,10 +100,10 @@
     transition: all 2s;
   }
   .light_shadow {
-    box-shadow: -1px 5px 6px 3px #7c7878;
+    box-shadow: 0px 3px 2px 0px #7c7878;
   }
   .light_shadow:hover {
-    box-shadow: -2px 5px 10px 8px #a8a8a8;
+    box-shadow: 1px 3px 14px 2px #7c7878;
     transition: all 0.5s;
   }
 }
