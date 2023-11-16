@@ -13,11 +13,11 @@
           <!--  ============== container =====================-->
     <div class="container h-screen mx-auto"  >
           <!--  ============= Alert =====================-->
-        <div class="w-auto absolute h-28 rounded-2xl bg-sky-600 left-4 top-4 gradientBg flex justify-between items-center">
+        <div id="alert-wrapper" class="w-auto h-28 rounded-2xl bg-sky-600 gradientBg flex justify-between items-center">
           <img src="../../image/svg/alert-Img.svg" alt="alert" class="h-full">
           <div class="flex flex-col justify-center items-start ml-3 ">
-            <h2 class="font-Aktiv_Bold uppercase text-3xl text-[#b33333]">password Error</h2>
-            <p class="font-Aktiv_Light text-base capitalize w-5/6  text-[#d9e0e39c]">The password must be at least 8 characters long.</p>
+            <h2 id="alert-title"  class="font-Aktiv_Bold uppercase text-3xl text-[#b33333]"></h2>
+            <p  id="alert-text" class="font-Aktiv_Light text-base capitalize w-5/6  text-[#d9e0e39c]"></p>
           </div>
         </div>
           <!--  ============== wrapper all form =====================-->

@@ -13,49 +13,101 @@ const userName = document.getElementById("user-name");
 const email = document.getElementById("email");
 let password = document.querySelector("#password");
 
+// alert element
+let alertWrapper = document.getElementById("alert-wrapper");
+let alertTitle = document.getElementById("alert-title");
+let alertText = document.getElementById("alert-text");
+
+// add animation alert
+function animation_alert() {
+  setTimeout(() => {
+    alertWrapper.style.cssText = `left='-5rem'; opacity: 0;transform: scale(1);`;
+  }, 8000);
+  alertWrapper.style.cssText = `animation: show_Alert 1.5s forwards cubic-bezier(0.68, -0.55, 0.27, 1.55);`;
+}
+
+function contentAlert(Title,Text){
+  alertTitle.innerHTML = `${Title}`
+  alertText.innerHTML = `${Text}`
+}
+
+// Check value name
+function checkName(name) {
+  if (typeof name.value  !== "string") {
+    contentAlert('name Error',"Please do not use numbers!")
+    animation_alert();
+    return false;
+  }
+  for (var i = 0; i < name.length; i++) {
+    if (isNaN(name.value.charAt(i))) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// check username
+function checkUsername(username) {
+  if (username.value.length < 6) {
+    contentAlert('userName Error',"Please choose your username more than 6 characters!.")
+    animation_alert();
+    return false;
+  }
+  if (/[0-9][!@#$%^&*()_+-={}[\]\\;':",.<>?]/.test(username)) {
+    contentAlert('userName Error',"Please do not use characters (!@#$%^&*) and number in your username.")
+    animation_alert();
+    return false;
+  }
+
+  return true;
+}
+
+//  check email!
+function checkEmail(email) {
+  let reg = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/
+  if (reg.test(email.value)) {
+    return true;
+  }
+  contentAlert('Email Error',"The email format is wrong, please enter a valid email!.")
+  animation_alert();
+  return false;
+}
+//   function check value password
 
 function checkPassword(password) {
-  // Check if the password is at least 8 characters long
   if (password.length < 8) {
-    // Show an alert
-    alert("The password must be at least 8 characters long.");
+  contentAlert('password','"The password must be at least 8 characters long."')
+    animation_alert();
     return false;
   }
-
-  // Check if the password contains at least one uppercase letter
   if (!/[A-Z]/.test(password)) {
-    // Show an alert
-    alert("The password must contain at least one uppercase letter.");
+    contentAlert('password','"The password must contain at least one uppercase letter."')
+    animation_alert();
     return false;
   }
-
-  // Check if the password contains at least one lowercase letter
   if (!/[a-z]/.test(password)) {
-    // Show an alert
-    alert("The password must contain at least one lowercase letter.");
+    contentAlert('password','"The password must contain at least one lowercase letter."')
+    animation_alert();
     return false;
   }
-
-  // Check if the password contains at least one number
   if (!/[0-9]/.test(password)) {
-    // Show an alert
-    alert("The password must contain at least one number.");
+    contentAlert('password','"The password must contain at least one number."')
+    animation_alert();
     return false;
   }
-
-  // Check if the password contains at least one special character
   if (!/[!@#$%^&*()_+-={}[\]\\;':",.<>?]/.test(password)) {
-    // Show an alert
-    alert("The password must contain at least one special character.");
+    contentAlert('password','"The password must contain at least one special character."')
+    animation_alert();
     return false;
   }
-
-  // The password is valid
   return true;
 }
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  checkPassword(password.value)
+  checkName(first_name)
+  checkEmail(email)
+  checkUsername(userName)
+  checkPassword(password.value);
 });
 
 // =====  Creative text label  ==== ///

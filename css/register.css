@@ -602,14 +602,6 @@ video {
   top: 0px;
 }
 
-.top-4 {
-  top: 1rem;
-}
-
-.left-4 {
-  left: 1rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -660,24 +652,24 @@ video {
   width: 11rem;
 }
 
-.w-96 {
-  width: 24rem;
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .w-\[30rem\] {
   width: 30rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-auto {
   width: auto;
 }
 
-.w-5\/6 {
-  width: 83.333333%;
+.w-full {
+  width: 100%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-default {
@@ -724,12 +716,12 @@ video {
   justify-content: stretch;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .border-b-2 {
@@ -785,14 +777,6 @@ video {
   text-align: center;
 }
 
-.font-mavis {
-  font-family: MAVIS;
-}
-
-.font-mavisBold {
-  font-family: MAVIS_Bold;
-}
-
 .font-Aktiv_Bold {
   font-family: Aktiv_Bold;
 }
@@ -801,16 +785,8 @@ video {
   font-family: Aktiv_Light;
 }
 
-.font-Aktiv {
-  font-family: Aktiv;
-}
-
-.font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.font-mavisLight {
-  font-family: MAVIS_Light;
+.font-mavis {
+  font-family: MAVIS;
 }
 
 .text-3xl {
@@ -850,11 +826,6 @@ video {
   color: rgb(126 178 221 / var(--tw-text-opacity));
 }
 
-.text-\[\#D12020\] {
-  --tw-text-opacity: 1;
-  color: rgb(209 32 32 / var(--tw-text-opacity));
-}
-
 .text-\[\#b33333\] {
   --tw-text-opacity: 1;
   color: rgb(179 51 51 / var(--tw-text-opacity));
@@ -865,23 +836,13 @@ video {
   color: rgb(209 237 225 / var(--tw-text-opacity));
 }
 
+.text-\[\#d9e0e39c\] {
+  color: #d9e0e39c;
+}
+
 .text-\[\#ffe0ac\] {
   --tw-text-opacity: 1;
   color: rgb(255 224 172 / var(--tw-text-opacity));
-}
-
-.text-\[\#462078\] {
-  --tw-text-opacity: 1;
-  color: rgb(70 32 120 / var(--tw-text-opacity));
-}
-
-.text-\[\#D9E0E3\] {
-  --tw-text-opacity: 1;
-  color: rgb(217 224 227 / var(--tw-text-opacity));
-}
-
-.text-\[\#d9e0e39c\] {
-  color: #d9e0e39c;
 }
 
 .transition {
@@ -1025,6 +986,68 @@ video {
       #2a76d3,
       #148ae5
     );
+}
+
+#alert-wrapper {
+  position: absolute;
+  top: 16px;
+  /* left: 1rem; */
+  left: -50rem;
+  transform: scale(0.5);
+  /* animation: show_Alert 1.5s forwards cubic-bezier(0.68, -0.55, 0.27, 1.55); */
+  opacity: 0;
+}
+
+@keyframes show_Alert {
+  0% {
+    left: -3rem;
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  75% {
+    transform: scale(1) translateX(0px);
+    background-image: radial-gradient(
+        circle,
+        #2492cd,
+        #1b7ec2,
+        #226ab6,
+        #2f56a6,
+        #3b4094,
+        #3e3f95,
+        #413d95,
+        #443c96,
+        #3f50ab,
+        #3763c0,
+        #2a76d3,
+        #148ae5
+      );
+  }
+
+  84% {
+    transform: scale(1.3) translateX(-2px) translateY(5px) translateZ(20px);
+    background-image: radial-gradient(
+        circle,
+        #e00d0d,
+        #d70036,
+        #c30051,
+        #a60067,
+        #810074,
+        #712082,
+        #5d308e,
+        #443c96,
+        #3f50ab,
+        #3763c0,
+        #2a76d3,
+        #148ae5
+      );
+  }
+
+  100% {
+    left: 2rem;
+    transform: scale(1) translateX(0px);
+    opacity: 1;
+  }
 }
 
 .hover\:text-\[\#65909c\]:hover {
