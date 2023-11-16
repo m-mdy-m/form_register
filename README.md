@@ -1,6 +1,6 @@
 # Description of the project:
 <p>Hello !!!
-This project is my first project with tailwind and this is a prototype of a fake and fictional site from the Instagram web application with the ability to comment and change photos and post different types of posts with desired photos and profiles..</p>
+A registration and login page with beautiful Css and javascripts animations along with validation of value name username email and password along with a special Grandint alert.</p>
 
 
 ## A picture of the  `sign-Up`:
