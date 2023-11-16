@@ -37,10 +37,12 @@
     src: url("../fonts/AktivGrotesk/AktivGroteskCorp-Medium.ttf");
   }
   .bg-img {
-    background: url("../image/bg/bg_1.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     object-fit: cover;
+    transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    backdrop-filter: blur(5px);
   }
   .form-input input {
     border: none;
@@ -53,7 +55,6 @@
     font-size: 16px;
     letter-spacing: 0.2rem;
     color: #6c6565;
-    
   }
   .completed {
     background: red;
@@ -78,19 +79,18 @@
     background-color: transparent;
   }
 
-
   .form-input input:focus + label span,
   .form-input input:valid + label span {
     color: white;
-    
+
     transform: translateY(-18px);
     z-index: 5;
   }
   .btn-shadow {
     width: 70%;
-    color:#a8a8a8;
+    color: #a8a8a8;
     height: 40%;
-    border-radius:10px;
+    border-radius: 10px;
     box-shadow: 0px 2px 4px 2px #464444dd;
     letter-spacing: 0.2rem;
     font-weight: bold;
@@ -105,5 +105,22 @@
   .light_shadow:hover {
     box-shadow: 1px 3px 14px 2px #7c7878;
     transition: all 0.5s;
+  }
+  .gradientBg {
+    background-image: radial-gradient(
+      circle,
+      #2492cd,
+      #1b7ec2,
+      #226ab6,
+      #2f56a6,
+      #3b4094,
+      #3e3f95,
+      #413d95,
+      #443c96,
+      #3f50ab,
+      #3763c0,
+      #2a76d3,
+      #148ae5
+    );
   }
 }

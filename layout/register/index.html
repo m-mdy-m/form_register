@@ -11,27 +11,35 @@
   </head>
   <body class="base bg-img" id="bgImg">
           <!--  ============== container =====================-->
-    <div class="container h-screen mx-auto "  >
+    <div class="container h-screen mx-auto"  >
+          <!--  ============= Alert =====================-->
+        <div class="w-auto absolute h-28 rounded-2xl bg-sky-600 left-4 top-4 gradientBg flex justify-between items-center">
+          <img src="../../image/svg/alert-Img.svg" alt="alert" class="h-full">
+          <div class="flex flex-col justify-center items-start ml-3 ">
+            <h2 class="font-Aktiv_Bold uppercase text-3xl text-[#b33333]">password Error</h2>
+            <p class="font-Aktiv_Light text-base capitalize w-5/6  text-[#d9e0e39c]">The password must be at least 8 characters long.</p>
+          </div>
+        </div>
           <!--  ============== wrapper all form =====================-->
       <div class="w-3/4 h-screen relative  mx-auto grid grid-rows-[20%,80%] justify-center items-stretch  ">
         <div class="absolute top-0 left-0 [&>*]:mt-4 [&>*]:rounded-md [&>*]:px-8 [&>*]:w-full w-44 [&>*]:h-12 text-3xl flex justify-center items-center flex-col [&>*]:font-mavis" >
           <!--  ============== User registration status =====================-->
-          <button class="bg-[#3e363f70] text-[#7EB2DD] hover:text-[#65909c]" id="sign-In">sign In</button>
-          <button class="bg-[#aefff179] text-[#d1ede1] hover:text-[#80BD9E]" id="sign-Up">sign Up</button>
+          <button class="bg-[#3e363f41] text-[#7EB2DD] hover:text-[#65909c]" id="sign-In">sign In</button>
+          <button class="bg-[#aefff150] text-[#d1ede1] hover:text-[#80BD9E]" id="sign-Up">sign Up</button>
         </div>
         <div class="flex justify-center items-center ">
           <!--  ============== Changing the state of the form compared to the state of the user =====================-->
-          <h1 class="capitalize text-4xl text-[#ffe0ac] light_shadow px-4 py-2 rounded-md bg-[#08080880] text-center font-mavis inline-block cursor-default">
+          <h1 class="capitalize text-4xl text-[#ffe0ac] light_shadow px-4 py-2 rounded-md bg-[#08080846] text-center font-mavis inline-block cursor-default">
             <span>sign</span>
             <span id="register_login">Up</span>
           </h1>
         </div>
           <!--  ============== form register =====================-->
-          <form action="#" class="grid grid-rows-5 w-[30rem] h-full  justify-stretch items-stretch  ">
+          <form action="#" class="grid grid-rows-5 w-[30rem] h-full  justify-stretch items-center  ">
             <!--  ============== Input wrapper form =====================-->
-            <div class="relative form-input mt-4 flex justify-center items-center w-full "id="wrapper-name">
+            <div class="relative form-input flex justify-center items-center w-full "id="wrapper-name">
             <!--  ============== Input form =====================-->
-              <input type="text" id="firstame" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required autocomplete="off">
+              <input type="text" id="first_name" autofocus class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required autocomplete="off">
               <label>Name</label>
             </div>
             <div class="relative form-input my-[10px] w-full " id="wrapper-username">
@@ -47,11 +55,11 @@
             <div class="relative form-input my-[10px]  w-full  flex justify-center items-center">
             <!--  ============== Input form =====================-->
               <img src="../../image/svg/emoji/main.svg" alt="show-password" class="absolute right-4 cursor-pointer " id="showPassword" >
-              <input type="password" id="password" class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required autocomplete="off">
+              <input type="password" id="password"  class="bg-transparent border-b-2 border-solid w-full py-4  text-sm  border-white"  required autocomplete="off">
               <label>Password</label>
             </div>
             <!--  ============== Button submit =====================-->
-            <div class="flex justify-center items-center w-full">
+            <div class="flex justify-center items-center w-full h-full">
               <button type="submit" class="btn-shadow text-center">Register</button>
             </div>
           </form>
